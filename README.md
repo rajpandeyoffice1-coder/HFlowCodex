@@ -1,48 +1,32 @@
-# Hari Invoice V4 Flutter Starter
+# Hari Invoice V4 Flutter
 
-This repository now contains a Flutter starter scaffold for **Hari Invoice V4** with:
+Flutter implementation with **dark liquid glass morphism design** and **default dark mode**.
 
-- Dark-first **liquid glass morphism** UI
-- Built-in **dark/light mode** toggle (default: dark)
-- Modular app shell for all 10 functional modules:
-  - Dashboard
-  - Invoices
-  - Clients
-  - Expenses
-  - Investments
-  - Tax Calculator
-  - AskHari AI
-  - Analytics
-  - Performance
-  - Settings
+## Implemented modules/pages
+- Dashboard
+- Invoices
+- Clients
+- Expenses
+- Investments (Dashboard/Table/Calendar tabs)
+- Tax Calculator (Old vs New regime compare)
+- AskHari AI (dedicated chat page)
+- Analytics
+- Performance
+- Settings
 
-## What is implemented now
+## Implemented functional foundations
+- INR formatting (`en_IN`)
+- Invoice totals and status logic
+- Dashboard balance/income/expense/expected-income calculation
+- Client status logic (VIP/Gold/New/Active)
+- Tax engine (slabs, 87A rebate, surcharge, cess, standard deduction)
+- Shared validators (required/email/number/GSTIN)
+- Modular feature pages with filters/inputs/action placeholders for full CRUD wiring
 
-1. **Design system**
-   - Dark and light themes via `AppTheme`
-   - Liquid glass card component (`BackdropFilter + gradient + soft border`)
-
-2. **Navigation shell**
-   - App bar + drawer + bottom nav
-   - Quick module switching and placeholder content for each module
-
-3. **Financial utility foundations**
-   - INR formatter (`en_IN`) in `AppFormatters`
-   - Domain models for dashboard, invoice items, and tax input
-
-## Next build phases suggested
-
-- Add Supabase integration (`supabase_flutter`) and repository layer per table.
-- Build each module screen with full form validations and CRUD actions.
-- Add charts using `fl_chart`/`syncfusion_flutter_charts`.
-- Implement tax engine services for old/new regime slabs and recommendations.
-- Add offline caching and secure auth token handling.
-
-## Run locally
-
-Install Flutter SDK first, then run:
-
+## Run
 ```bash
 flutter pub get
 flutter run
 ```
+
+> Note: Supabase integration and persistent storage wiring are prepared as modular next steps.
